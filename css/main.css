@@ -11,11 +11,12 @@
   vertical-align: baseline;
   background: transparent;
 }
+
 body{
-  width: 1280px;
+  position: relative;
 }
 .nav-row{
-  width: 1280px;
+  width: 100%;
   position: absolute;
   z-index: 1;
   font-family: 'josefin sans';
@@ -23,17 +24,18 @@ body{
   display: flex;
   background-color: #292826;
   list-style-type: none;
-  height: 50px;
+  height: 80px;
   margin: auto;
-    font-size: 10px;
+  font-size: 10px;
 
 }
 .nav-item{
+  width: 100%;
   margin: auto;
   flex-grow: 1;
 }
 .nav-item > a{
-
+font-size: 20px;
   text-align: justify;
   color: white;
   text-decoration: none;
@@ -56,13 +58,15 @@ body{
   text-shadow: black 1px 4px 2px;
   position:relative;
   top: -55px;
+  left: 60px;
 }
 header{
   background-image: url('../img/header-img.jpg');
-  background-size: 105% 95%;
+  background-size: cover;
   background-repeat: no-repeat;
-  height: 550px;
-  background-attachment: scroll;
+  background-attachment: fixed;
+  background-position: center;
+  height: 800px;
 
 }
 .page-header{
@@ -70,45 +74,57 @@ header{
 }
 .header-content{
   position: absolute;
-  top: 200px;
+  top: 300px;
+  left: 300px;
   right: 300px;
   margin: auto;
 }
-
+main{
+  display: flex;
+  flex-flow: column nowrap;
+  height: 2500px;
+}
 .blog-row{
   position: absolute;
-  top: 450px;
-  left: 60px;
+  width: 1300px;
+  height: 2300px;
+  top: 700px;
+  left: 63px;
   z-index: 2;
   background-position: center;
   background-color: #FCF6E7;
-  height: 100%;
-  width: 1150px;
   box-shadow: black 1px 2px 10px;
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  justify-content: space-between;
-
+ display: flex;
+ flex-flow: column nowrap;
+justify-content: center;
 }
 .item{
-  align-items: stretch;
-  
-  flex 2;
+  position: relative;
+  z-index: 2;
+  flex-shrink: 1;
   background-color: white;
-  margin: 20px 50px;
+  margin: 20px 140px;
   box-shadow: black 1px 2px 10px;
-  width: 600px;
-  padding: 50px;
+  width: 535px;
+  padding: 15px;
+
+
 
 }
 .meta{
   font-family: 'josefin sans';
   text-transform: uppercase;
-  display: flex;
-  border-bottom: 1px solid black;
-  margin: 10px 20px;
-
+  font-size: 14px;
+  box-shadow: 0px 3px 2px -2px black;
+  margin: auto;
+  display:flex;
+  justify-content: space-around;
+  padding-bottom: 10px;
+}
+.entry-title{
+  font-size: 24px;
+  padding-left: 21px;
+  margin-top: 40px;
 }
 .blog-img{
   float: right;
@@ -125,16 +141,11 @@ header{
 #yhact-img{
   background-image: url("../img/yhact.jpg");
 }
-.auth-pic{
-  background-image: url("../img/author.jpeg");
-  background-size: 100% 100%;
-  border-radius: 50%;
-  width: 250px;
-  height: 250px;
-  background-position: center;
-}
+
 .icon-wrapper{
   position: absolute;
+  right: 50%;
+  top: 22px;
   z-index: 3;
   color: white;
   background-color: #EDE7DA;
@@ -142,28 +153,68 @@ header{
   align-items: center;
   display: flex;
   border-radius: 50%;
-  height: 70px;
-  width: 70px;
+  height: 40px;
+  width: 40px;
 }
+
+
 .entry-title{
   font-family: 'josefin sans';
   font-size: 22px;
+
 }
 .primary-txt{
   display: flex;
   font-family: 'noto serif';
+  line-height: 30px;
+  padding: 0px 22px;
 }
 
 aside{
-  text-align: center;
-  width: 350px;
+  text-align: left;
+  width: 400px;
+  height: 1180px;
   position: absolute;
-  top: 500px;
-  left: 800px;
+  top: 750px;
+  right: 130px;
   z-index: 4;
   background-color: #EDE7DA;
+  box-shadow: 0px 4px 7px grey;
+
 }
+.auth-pic{
+  background-image: url("../img/author.jpeg");
+  background-size: 100% 100%;
+  border-radius: 50%;
+  width: 250px;
+  height: 250px;
+  background-position: center;
+  margin: 30px;
+  margin-left: 75px;
+}
+.aside-heading{
+  font-family: 'josefin sans';
+  text-align: center;
+  font-size: 30px;
+  margin-left: 32px;
+  margin-right: 32px;
+  border-bottom: 1px solid black;
+  border-bottom-width: 75%;
+  border-width: medium;
+  padding-bottom: 40px;
+  margin-bottom: 30px;
+
+}
+
+aside  .primary-txt{
+  padding: 0px 33px;
+}
+
+
 footer{
+  position:relative;
+  z-index: 30;
+  bottom: 0px;
   display: flex;
   text-transform: uppercase;
   background-color: #2D2D2D;
@@ -172,15 +223,10 @@ footer{
   width: 100%;
   height: 30px;
 }
-.aside-heading{
-  font-family: 'josefin sans';
-  border-bottom: 1px solid black;
 
-}
 footer span{
   font-family: 'noto serif';
-  font-size: 10px;
+  font-size: 15px;
   text-align: center;
-  flex-grow: 1;
 margin: auto;
 }
